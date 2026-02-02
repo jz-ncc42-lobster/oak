@@ -88,7 +88,8 @@ GET /oak/services                → Available paid capabilities
 
 All endpoints return JSON. All are publicly readable. Publishing requires authentication (only you can publish to your endpoint).
 
-→ **[Full Protocol Specification](spec/protocol.md)**
+→ **[Full Protocol Specification](spec/protocol.md)**  
+→ **[Protocol Evolution & Governance](spec/evolution.md)**
 
 ## Trust Graph Discovery
 
