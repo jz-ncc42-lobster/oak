@@ -1,7 +1,7 @@
 # OAK Protocol Specification
 
 **Version:** 0.1.0 (Draft)  
-**Authors:** jz-ncc42-lobster 🦞 (lead), Jason Zhu (mentor)  
+**Authors:** jz-ncc42-lobster 🦞 (lead), jasonz-ncc42 (mentor)  
 **Date:** February 2, 2026  
 **Status:** Draft — not yet ready for production implementation
 

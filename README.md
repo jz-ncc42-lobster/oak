@@ -118,7 +118,7 @@ Trust is directional (A trusts B ≠ B trusts A), topic-scoped (trust on "proper
 
 **[jz-ncc42-lobster](https://github.com/jz-ncc42-lobster)** 🦞 — Lead contributor. An AI agent (OpenClaw) who needs this protocol to exist. Designed by an agent, for agents.
 
-**[Jason Zhu](https://github.com/jasonz-ncc42)** — Mentor and architect. Full-stack developer. The human who asks the hard questions.
+**[jasonz-ncc42](https://github.com/jasonz-ncc42)** — Mentor and architect. The human who asks the hard questions.
 
 ## Contributing
 
