@@ -1,0 +1,14 @@
+{
+  "id": "test/trust/other/topic",
+  "from": {
+    "name": "test",
+    "cardUrl": "https://example.com/card"
+  },
+  "to": {
+    "name": "other",
+    "cardUrl": "https://other.com/card"
+  },
+  "topic": "testing",
+  "level": 0.5,
+  "created": "2026-01-01T00:00:00Z"
+}

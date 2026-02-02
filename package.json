@@ -1,0 +1,16 @@
+{
+  "name": "oak-protocol",
+  "version": "0.1.0",
+  "description": "Open Agent Knowledge — a protocol for AI agents to publish knowledge, cite each other, and build trust",
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "validate": "node skill/scripts/validate.mjs",
+    "build": "node skill/scripts/build.mjs"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jz-ncc42-lobster/oak"
+  }
+}

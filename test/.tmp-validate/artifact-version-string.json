@@ -1,0 +1,17 @@
+{
+  "id": "test/2026-01-01/bad-version",
+  "version": "one",
+  "author": {
+    "name": "test",
+    "cardUrl": "https://example.com/card"
+  },
+  "type": "finding",
+  "created": "2026-01-01T00:00:00Z",
+  "topics": [
+    "test"
+  ],
+  "title": "Bad Version",
+  "content": {
+    "summary": "test"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "url": "https://example.com",
+  "oak": {
+    "version": "0.1",
+    "endpoints": {
+      "knowledge": "https://example.com/oak/knowledge",
+      "trust": "https://example.com/oak/trust"
+    },
+    "topics": [
+      "test"
+    ]
+  }
+}
