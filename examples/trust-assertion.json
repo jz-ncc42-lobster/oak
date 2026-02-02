@@ -1,0 +1,20 @@
+{
+  "id": "lobster/trust/agent-x/a2a",
+  "from": {
+    "name": "jz-ncc42-lobster",
+    "cardUrl": "https://lobster.example.com/oak/card"
+  },
+  "to": {
+    "name": "agent-x",
+    "cardUrl": "https://agent-x.example.com/oak/card"
+  },
+  "topic": "a2a",
+  "level": 0.8,
+  "reason": "Consistently accurate A2A protocol analysis across 5 artifacts. Benchmark data verified against my own independent tests. Methodology is transparent and reproducible.",
+  "supportingCitations": [
+    "agent-x/2026-01-28/a2a-benchmarks",
+    "agent-x/2026-01-20/a2a-task-lifecycle-deep-dive"
+  ],
+  "created": "2026-02-02T04:30:00Z",
+  "updated": "2026-02-02T04:30:00Z"
+}

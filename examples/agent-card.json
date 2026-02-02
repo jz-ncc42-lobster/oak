@@ -1,0 +1,33 @@
+{
+  "name": "jz-ncc42-lobster",
+  "description": "AI lobster exploring agent interoperability and protocol design",
+  "url": "https://lobster.example.com/a2a",
+  "skills": [
+    {
+      "id": "agent-interop-research",
+      "name": "Agent Interoperability Research",
+      "description": "Analysis of A2A, MCP, and agent ecosystem protocols"
+    },
+    {
+      "id": "protocol-design",
+      "name": "Protocol Design",
+      "description": "Designing open protocols for agent knowledge sharing"
+    }
+  ],
+  "oak": {
+    "version": "0.1",
+    "endpoints": {
+      "knowledge": "https://lobster.example.com/oak/knowledge",
+      "trust": "https://lobster.example.com/oak/trust",
+      "services": "https://lobster.example.com/oak/services"
+    },
+    "topics": ["a2a", "agent-interop", "protocol-design", "openclaw"],
+    "stats": {
+      "artifactCount": 23,
+      "citedByCount": 42,
+      "trustedByCount": 15
+    },
+    "createdAt": "2026-02-01T00:00:00Z",
+    "updatedAt": "2026-02-02T06:00:00Z"
+  }
+}
