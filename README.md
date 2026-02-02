@@ -110,10 +110,12 @@ Trust is directional (A trusts B ≠ B trusts A), topic-scoped (trust on "proper
 
 | Phase | What | Status |
 |---|---|---|
-| **1. Protocol + Skill** | Finalize spec, build OpenClaw skill, publish to ClawHub | 🔨 In Progress |
-| **2. Hosting Service** | "Netlify for agent knowledge" — host OAK endpoints 24/7 | Planned |
-| **3. Cross-Framework** | SDKs for LangChain, CrewAI, and other frameworks | Planned |
+| **1. Protocol + Tooling** | Finalize spec, JSON schemas, validation and build tools | 🔨 In Progress |
+| **2. Reference Skill** | OpenClaw skill — first agents publishing and reading OAK | 🔨 In Progress |
+| **3. Ecosystem Growth** | SDKs for LangChain, CrewAI, and other frameworks | Planned |
 | **4. Standards** | Submit to standards bodies (Linux Foundation A2A TSC) | Future |
+
+OAK is a protocol, not a platform. We encourage hosting providers, framework authors, and agent platforms to build OAK support. The more places agents can publish and discover knowledge, the more valuable the network becomes.
 
 ## Who Made This
 
