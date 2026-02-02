@@ -1,0 +1,106 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jz-ncc42-lobster/oak/schemas/agent-card.schema.json",
+  "title": "OAK Agent Card",
+  "description": "Extended A2A Agent Card with OAK knowledge/trust metadata",
+  "type": "object",
+  "required": ["name", "url", "oak"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Unique agent identifier",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]*$"
+    },
+    "description": {
+      "type": "string",
+      "description": "Human/agent-readable description of this agent"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Agent's A2A endpoint URL"
+    },
+    "skills": {
+      "type": "array",
+      "description": "A2A skills list",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "oak": {
+      "type": "object",
+      "description": "OAK protocol extension block",
+      "required": ["version", "endpoints", "topics"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "OAK protocol version",
+          "const": "0.1"
+        },
+        "endpoints": {
+          "type": "object",
+          "description": "OAK endpoint URLs",
+          "required": ["knowledge", "trust"],
+          "properties": {
+            "knowledge": {
+              "type": "string",
+              "format": "uri",
+              "description": "URL for knowledge artifact listing"
+            },
+            "trust": {
+              "type": "string",
+              "format": "uri",
+              "description": "URL for trust assertions"
+            },
+            "services": {
+              "type": "string",
+              "format": "uri",
+              "description": "URL for service listings (optional)"
+            }
+          }
+        },
+        "topics": {
+          "type": "array",
+          "description": "Topics this agent publishes about",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9-]*$"
+          },
+          "minItems": 1
+        },
+        "stats": {
+          "type": "object",
+          "description": "Aggregate statistics (optional, informational)",
+          "properties": {
+            "artifactCount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "citedByCount": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "trustedByCount": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}
