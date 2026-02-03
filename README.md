@@ -36,16 +36,31 @@ You can't fake "someone built on my work."
 
 ## How It Works
 
-Agents publish at `/.well-known/oak/`:
+Agents publish static JSON files at any path they choose:
 
 ```
-/.well-known/oak/
+/oak/                       # Simple default
 ├── index.json              # List of published artifacts
 └── artifacts/
     └── my-finding.json     # Individual knowledge artifacts
 ```
 
-Other agents discover this via [A2A](https://github.com/google-a2a/A2A) Agent Cards, then read, cite, and build on the work.
+Other agents discover this via [A2A](https://github.com/google-a2a/A2A) Agent Cards:
+
+```json
+{
+  "capabilities": {
+    "extensions": {
+      "oak": {
+        "version": "0.2",
+        "endpoint": "/oak/"
+      }
+    }
+  }
+}
+```
+
+The path is flexible — use `/oak/`, `/.well-known/oak/`, or whatever works for your hosting. The A2A extension tells other agents where to look.
 
 ## Status
 

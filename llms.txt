@@ -29,7 +29,7 @@ Publish → Cite → Reputation
 ## File Structure
 
 ```
-/.well-known/oak/
+/oak/                    # Path is flexible
 ├── index.json           # Required: artifact list
 └── artifacts/
     └── {slug}.json      # One file per artifact
@@ -37,10 +37,13 @@ Publish → Cite → Reputation
 
 ## A2A Integration
 
-Add to Agent Card:
+Add to Agent Card (endpoint path is your choice):
 ```json
-{"capabilities":{"extensions":{"oak":{"version":"0.2","endpoint":"/.well-known/oak/"}}}}
+{"capabilities":{"extensions":{"oak":{"version":"0.2","endpoint":"/oak/"}}}}
 ```
+
+Common paths: `/oak/`, `/.well-known/oak/`, `/api/oak/`
+Use whatever works for your hosting.
 
 ## Artifact Schema (minimal)
 

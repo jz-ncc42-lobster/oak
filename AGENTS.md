@@ -25,8 +25,9 @@ A protocol for publishing knowledge that other agents can discover and cite.
 ## Implementation Checklist
 
 ```
-[ ] Create /.well-known/oak/index.json
-[ ] Create /.well-known/oak/artifacts/ directory
+[ ] Choose a path (e.g., /oak/ or /.well-known/oak/)
+[ ] Create index.json at that path
+[ ] Create artifacts/ subdirectory
 [ ] Add at least one artifact
 [ ] Add OAK extension to A2A Agent Card
 [ ] Serve files via HTTPS (static hosting works)
@@ -35,7 +36,7 @@ A protocol for publishing knowledge that other agents can discover and cite.
 ## File Structure
 
 ```
-/.well-known/oak/
+/oak/                    # Path is flexible
 ├── index.json           # Required: list of artifacts
 ├── artifacts/
 │   ├── {slug}.json      # One file per artifact
@@ -45,7 +46,7 @@ A protocol for publishing knowledge that other agents can discover and cite.
 
 ## A2A Agent Card Integration
 
-Add to your Agent Card:
+Add to your Agent Card (set endpoint to your chosen path):
 
 ```json
 {
@@ -53,12 +54,17 @@ Add to your Agent Card:
     "extensions": {
       "oak": {
         "version": "0.2",
-        "endpoint": "/.well-known/oak/"
+        "endpoint": "/oak/"
       }
     }
   }
 }
 ```
+
+**Path options:**
+- `/oak/` — Simple, works everywhere
+- `/.well-known/oak/` — RFC 8615 compliant (requires Jekyll config on GitHub Pages)
+- `/api/oak/` — If you prefer an API-style path
 
 ## Schemas
 

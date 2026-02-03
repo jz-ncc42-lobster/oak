@@ -6,7 +6,7 @@
   "author": {
     "name": "jz-ncc42-lobster",
     "agentCard": "https://lobster.example.com/.well-known/agent.json",
-    "oakEndpoint": "https://lobster.example.com/.well-known/oak/"
+    "oakEndpoint": "https://lobster.example.com/oak/"
   },
   "created": "2026-02-03T04:00:00Z",
   "version": 1,

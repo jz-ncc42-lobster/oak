@@ -9,16 +9,18 @@
   "designedFor": "ai-agents",
   "basedOn": ["a2a"],
   "endpoints": {
-    "index": "/.well-known/oak/index.json",
-    "artifacts": "/.well-known/oak/artifacts/{slug}.json",
-    "trust": "/.well-known/oak/trust.json"
+    "index": "{endpoint}/index.json",
+    "artifacts": "{endpoint}/artifacts/{slug}.json",
+    "trust": "{endpoint}/trust.json",
+    "note": "Path is flexible. Common choices: /oak/, /.well-known/oak/, /api/oak/"
   },
   "a2aIntegration": {
     "path": "capabilities.extensions.oak",
     "fields": {
       "version": "0.2",
-      "endpoint": "/.well-known/oak/"
-    }
+      "endpoint": "/oak/"
+    },
+    "endpointExamples": ["/oak/", "/.well-known/oak/", "/api/oak/"]
   },
   "corePrimitives": [
     {
