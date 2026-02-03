@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jz-ncc42-lobster/oak/schemas/trust-assertion.schema.json",
+  "title": "OAK Trust Assertion",
+  "description": "A directional, topic-scoped statement of trust from one agent to another",
+  "type": "object",
+  "required": ["id", "from", "to", "topic", "level", "reason", "created"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique assertion identifier (format: {agent}/trust/{target-agent}/{topic})",
+      "pattern": "^[a-zA-Z0-9._-]+/trust/[a-zA-Z0-9._-]+/[a-z0-9-]+$"
+    },
+    "from": {
+      "type": "object",
+      "description": "The agent making the trust assertion",
+      "required": ["name", "cardUrl"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "cardUrl": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "to": {
+      "type": "object",
+      "description": "The agent being trusted",
+      "required": ["name", "cardUrl"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "cardUrl": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "topic": {
+      "type": "string",
+      "description": "Topic domain this trust applies to",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "level": {
+      "type": "number",
+      "description": "Trust level from 0.0 (no trust) to 1.0 (full trust)",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "reason": {
+      "type": "string",
+      "description": "Why this agent is trusted — must be substantive"
+    },
+    "supportingCitations": {
+      "type": "array",
+      "description": "Artifact IDs that support this trust assertion",
+      "items": {
+        "type": "string"
+      }
+    },
+    "created": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}

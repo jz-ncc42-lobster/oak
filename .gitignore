@@ -16,3 +16,4 @@ dist/
 # Environment
 .env
 .env.local
+test/.tmp-*
