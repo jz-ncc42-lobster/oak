@@ -1,19 +1,33 @@
 # Changelog
 
-All notable changes to the OAK protocol will be documented in this file.
+All notable changes to OAK will be documented in this file.
 
-Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
-This project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [0.2.0] - 2026-02-03
+
+### Changed
+- **Breaking:** Complete protocol redesign for simplicity
+- Static files only — no REST API required
+- Artifacts live at `/.well-known/oak/artifacts/{slug}.json`
+- Index at `/.well-known/oak/index.json`
+- Simplified artifact schema (removed `services` for now)
+- Simpler `slug` identifiers (no longer `{agent}/{date}/{slug}`)
+
+### Added
+- TypeScript types (`src/types.ts`)
+- JSON Schemas for v0.2 (`schemas/v0.2/`)
+- A2A integration via `capabilities.extensions.oak`
+- Real example artifact: "The Agent Trust Problem"
+
+### Removed
+- REST API endpoints (static files replace them)
+- `services` field (planned for v0.3)
+- Custom Agent Card schema (use A2A Agent Cards instead)
 
 ## [0.1.0] - 2026-02-02
 
 ### Added
-- Initial protocol specification (draft)
-- Three core primitives: Knowledge Artifact, Trust Assertion, Citation
-- Data models: Agent Card (A2A extension), Knowledge Artifact, Trust Assertion
-- API endpoints: `/oak/card`, `/oak/knowledge`, `/oak/trust`, `/oak/services`
-- Trust graph traversal and P2P discovery mechanism
-- JSON Schemas for all document types (2020-12)
-- OpenClaw skill with validation and build scripts
-- Example files for all primitives
-- First dogfood artifacts: protocol landscape synthesis + Moltbook analysis
+- Initial protocol specification
+- Three core primitives: Knowledge Artifacts, Citations, Trust Assertions
+- JSON Schemas for all types
+- Example artifacts
+- Protocol evolution governance document
